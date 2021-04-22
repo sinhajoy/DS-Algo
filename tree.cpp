@@ -35,8 +35,28 @@ void postorder(struct Node* root){
     postorder(root->right);
     cout<<root->data<<" \n";
 }
+/*
+int search(int inorder[],int start,int end,int curr){
+    for(int i=0;i<inorder.size();i++){
 
+    }
+
+}
+Node* buildTree(int preorder[],int inorder[], int start, int end){
+    static int indx=0;
+    int curr=preorder[indx];
+    indx++;
+    Node* node =  new Node(curr);
+    int pos = search(inorder,start,end,curr);
+    node->left=buildTree(preorder,inorder,start,pos-1);
+    node->right=buildTree(preorder,inorder,pos+1,end);
+}
+*/
 int main(){
+    
+    int preorder[]={1,2,4,3,5};
+    int inorder[]={4,2,1,5,3};
+    
     struct Node* root = new Node(1);
     root->left=new Node(2);
     root->right=new Node(3);
